@@ -1,8 +1,16 @@
 # ImageUploadMask
 
+[ ![Download](https://api.bintray.com/packages/darren/maven/image-upload-mask/images/download.svg) ](https://bintray.com/darren/maven/image-upload-mask/_latestVersion)
+
 ## Preview
 
 ![](screenshots/GIF.gif)
+
+## Download
+
+```gradle
+compile 'com.chenglei.imageuploadmask:image-upload-mask:1.0.0'
+```
 
 ## Useage
 
