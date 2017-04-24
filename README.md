@@ -15,6 +15,8 @@ compile 'com.chenglei.imageuploadmask:image-upload-mask:1.0.0'
 ## Useage
 
 ```java
+ImageView imageView = (ImageView) findViewById(R.id.imageView);
+
 ImageUploadMask mask = new ImageUploadMask.Builder(this)
     .oval(true)
     .direction(ShapeMask.Direction.LTR)
@@ -23,7 +25,7 @@ ImageUploadMask mask = new ImageUploadMask.Builder(this)
     .textColorInt(Color.WHITE)
     .textSize(12)
     .margin(1)
-    .bind(mImageView1)
+    .bind(imageView)
     .build();
 
 mask.setProgress(50);
