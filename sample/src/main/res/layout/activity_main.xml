@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:src="@drawable/avatar"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dip"
+            app:riv_mutate_background="true"
+            app:riv_oval="true"
+            app:riv_tile_mode="clamp"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/avatar"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dip"
+            app:riv_mutate_background="true"
+            app:riv_oval="true"
+            app:riv_tile_mode="clamp"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/avatar"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dip"
+            app:riv_mutate_background="true"
+            app:riv_oval="true"
+            app:riv_tile_mode="clamp"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/avatar"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dip"
+            app:riv_mutate_background="true"
+            app:riv_oval="true"
+            app:riv_tile_mode="clamp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:src="@drawable/avatar"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dip"
+            app:riv_corner_radius="12dip"
+            app:riv_mutate_background="true"
+            app:riv_oval="false"
+            app:riv_tile_mode="clamp"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView6"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/avatar"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dip"
+            app:riv_corner_radius="12dip"
+            app:riv_mutate_background="true"
+            app:riv_oval="false"
+            app:riv_tile_mode="clamp"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView7"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/avatar"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dip"
+            app:riv_corner_radius="12dip"
+            app:riv_mutate_background="true"
+            app:riv_oval="false"
+            app:riv_tile_mode="clamp"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView8"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/avatar"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dip"
+            app:riv_corner_radius="12dip"
+            app:riv_mutate_background="true"
+            app:riv_oval="false"
+            app:riv_tile_mode="clamp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:text="Upload"
+        android:textAllCaps="false"/>
+
+</LinearLayout>
