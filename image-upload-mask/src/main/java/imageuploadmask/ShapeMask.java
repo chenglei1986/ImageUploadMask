@@ -3,6 +3,9 @@ package imageuploadmask;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.RectF;
+import android.graphics.Region;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View;
@@ -17,6 +20,8 @@ public abstract class ShapeMask extends View {
     protected TextPaint mTextPaint;
     protected float mCornerRadius;
     protected float mMargin;
+    protected RectF mMaskOvalRect = new RectF();
+    private Path mMaskPath = new Path();
 
     public enum Direction {
         /**
@@ -102,15 +107,58 @@ public abstract class ShapeMask extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+
         drawMask(canvas);
+
         if (mProgress < 100) {
             drawProgress(canvas);
         }
     }
 
-    protected abstract void drawMask(Canvas canvas);
+    protected void drawMask(Canvas canvas) {
+        mMaskPath.reset();
+
+        float width = getWidth() - mMargin * 2;
+        float height = getHeight() - mMargin * 2;
+        float left = getLeft() + mMargin;
+        float right = getRight() - mMargin;
+        float top = getTop() + mMargin;
+        float bottom = getBottom() - mMargin;
+        mMaskOvalRect.set(left, top, right, bottom);
+
+        switch (mDirection) {
+            case LTR: {
+                float x = mProgress * width / 100 + left;
+                mMaskPath.addRect(x, top, right, bottom, Path.Direction.CW);
+                break;
+            }
+
+            case RTL: {
+                float x = width - mProgress * width / 100 + left;
+                mMaskPath.addRect(left, top, x, bottom, Path.Direction.CW);
+                break;
+            }
+
+            case UTD: {
+                float y = mProgress * height / 100 + top;
+                mMaskPath.addRect(left, y, right, bottom, Path.Direction.CW);
+                break;
+            }
+
+            case DTU: {
+                float y = height - mProgress * height / 100 + top;
+                mMaskPath.addRect(left, top, right, y, Path.Direction.CW);
+                break;
+            }
+        }
+
+        canvas.clipPath(getClipPath(), Region.Op.REPLACE);
+        canvas.drawPath(mMaskPath, mMaskPaint);
+    }
 
     protected void drawProgress(Canvas canvas) {
-        canvas.drawText((int)mProgress + "%", getWidth() / 2, getHeight() / 2 + mTextSize / 2, mTextPaint);
+        canvas.drawText((int) mProgress + "%", getWidth() / 2, getHeight() / 2 + mTextSize / 2, mTextPaint);
     }
+
+    protected abstract Path getClipPath();
 }

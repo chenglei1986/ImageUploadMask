@@ -9,7 +9,7 @@
 ## Download
 
 ```gradle
-compile 'com.chenglei.imageuploadmask:image-upload-mask:1.0.0'
+compile 'com.chenglei.imageuploadmask:image-upload-mask:1.0.1'
 ```
 
 ## Useage

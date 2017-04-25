@@ -96,7 +96,7 @@ public class ImageUploadMask {
         public ImageUploadMask build() {
             Assertions.assertCondition(mTargetView != null, "TargetView can not be null!");
 
-            ShapeMask shapeMask = null;
+            ShapeMask shapeMask;
             if (mOval) {
                 shapeMask = new OvalMask(mContext);
             } else {

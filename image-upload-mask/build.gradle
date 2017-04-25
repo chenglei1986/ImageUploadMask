@@ -20,7 +20,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-version = "1.0.0"
+version = "1.0.1"
 def siteUrl = 'https://github.com/chenglei1986/ImageUploadMask'
 def gitUrl = 'https://github.com/chenglei1986/ImageUploadMask.git'
 group = "com.chenglei.imageuploadmask"
